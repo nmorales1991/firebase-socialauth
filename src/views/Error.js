@@ -10,7 +10,7 @@ const Error = ({ history }) => {
         <Result
             status="404"
             title="404"
-            subTitle="La página que buscas no existe :("
+            subTitle="Mensaje de error prueba !!!!"
             extra={<Button onClick={()=>volver()} type="primary">Volver</Button>}
         />
     );

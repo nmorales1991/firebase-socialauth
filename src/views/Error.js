@@ -10,7 +10,7 @@ const Error = ({ history }) => {
         <Result
             status="404"
             title="404"
-            subTitle="Mensaje de error para branch prueba"
+            subTitle="Mensaje de error prueba !!!!"
             extra={<Button onClick={()=>volver()} type="primary">Volver</Button>}
         />
     );

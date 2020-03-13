@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import {app} from "../firebaseConfig";
 import Cargando from '../components/Cargando'
 
-export const Auth = React.createContext();
+export const Context = React.createContext();
 
-export const AuthContext = ({ children }) => {
+export const GlobalContext = ({ children }) => {
     const [usuario, setUsuario] = useState(null);
     const [showChild, setShowChild] = useState(false);
 
@@ -19,13 +19,13 @@ export const AuthContext = ({ children }) => {
         return <Cargando/>;
     } else {
         return (
-            <Auth.Provider
+            <Context.Provider
                 value={{
                     usuario
                 }}
             >
                 {children}
-            </Auth.Provider>
+            </Context.Provider>
         );
     }
 };

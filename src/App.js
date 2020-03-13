@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./views/Dashboard";
 import Login from "./views/Login";
 import Error from "./views/Error";
-import { AuthContext } from "./context/AuthContext";
+import { GlobalContext } from "./context/Context";
 
 const App = () => (
-    <AuthContext>
+    <GlobalContext>
         <Router>
             <Switch>
                 <Route exact path="/login">
@@ -20,7 +20,7 @@ const App = () => (
                 </Route>
             </Switch>
         </Router>
-    </AuthContext>
+    </GlobalContext>
 );
 
 export default App;

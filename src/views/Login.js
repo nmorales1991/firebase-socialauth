@@ -9,13 +9,13 @@ import {
     facebookAuthProvider,
     githubAuthProvider
 } from "../firebaseConfig";
-import { Auth } from "../context/AuthContext";
+import { Context } from "../context/Context";
 import Errores from '../components/Errores'
 
 const Login = ({ history }) => {
     const { Content, Footer } = Layout;
     const [signup, setsignup] = useState(false);
-    const { usuario } = useContext(Auth);
+    const { usuario } = useContext(Context);
     const [error, seterror] = useState('')
 
     useEffect(() => {

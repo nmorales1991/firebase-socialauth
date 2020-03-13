@@ -1,12 +1,12 @@
 import React, { useEffect, useContext ,useState} from "react";
 import Header from "../components/Header";
 import { Layout } from "antd";
-import { Auth } from "../context/AuthContext";
+import { Context } from "../context/Context";
 import { withRouter } from "react-router";
 
 const Dashboard=({history}) =>{
     const { Content, Footer } = Layout;
-    const { usuario } = useContext(Auth);
+    const { usuario } = useContext(Context);
     const [nombre, setnombre] = useState(null)
 
     useEffect(() => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { PageHeader, Button } from "antd";
-import {app} from '../firebaseConfig'
+import app from '../firebaseConfig'
 
 export default function Header({titulo,subtitulo}) {
     return (

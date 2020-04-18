@@ -1,4 +1,4 @@
-import * as firebase from "firebase/app";
+import * as firebase from "firebase";
 import "firebase/auth";
 
 const app = firebase.initializeApp({
@@ -12,8 +12,8 @@ const app = firebase.initializeApp({
     measurementId: "G-5SV8PW8604"
 });
 
-const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+/*const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
-const githubAuthProvider = new firebase.auth.GithubAuthProvider();
+const githubAuthProvider = new firebase.auth.GithubAuthProvider();*/
 
-export  {app, googleAuthProvider, facebookAuthProvider, githubAuthProvider};
+export default app;

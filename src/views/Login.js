@@ -3,16 +3,16 @@ import { Layout } from "antd";
 import { Form, Icon, Input, Button } from "antd";
 import Signup from "./Signup";
 import { withRouter } from "react-router";
-import {
-    app,
-    googleAuthProvider,
-    facebookAuthProvider,
-    githubAuthProvider
-} from "../firebaseConfig";
+import * as firebase from "firebase/app";
+import app from "../firebaseConfig";
 import { Auth } from "../context/AuthContext";
 import Errores from '../components/Errores'
 
 const Login = ({ history }) => {
+    const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+    const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
+    const githubAuthProvider = new firebase.auth.GithubAuthProvider();
+
     const { Content, Footer } = Layout;
     const [signup, setsignup] = useState(false);
     const { usuario } = useContext(Auth);
